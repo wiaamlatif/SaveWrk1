@@ -1,0 +1,84 @@
+
+- Install windows 10 from USB
+  pour activer windows 10 aller voir le site:
+  https://msguides.com/windows-10#google_vignette
+
+- Use activate key with regEdit .
+- Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SoftwareProtectionPlatform
+
+- https://msguides.com/windows-10
+  Home: TX9XD-98N7V-6WMQ6-BX7FG-H8Q99
+  licensekey :TX9XD-98N7V-6WMQ6-BX7FG-H8Q99  
+  run cmd as admin
+  > slmgr /ipk yourlicensekey
+  > slmgr /skms kms8.msguides.com
+  The last step is to activate your Windows using the command “slmgr /ato”.
+  > slmgr /ato
+
+- run cmd as admin after :
+  > bcdedit -set TESTSIGNING OFF
+
+- for skiping password -> sign-in option -> password empty
+
+On cmd as admin :
+- dism /online /cleanup-image /checkHealth
+- dism /online /cleanup-image /scanHealth
+- dism /online /cleanup-image /restoreHealth
+- sfc /scannow
+
+- Download and install git (64 bits)
+- Download php
+- Download Mysql
+- Download phpMyAdmin
+- download composer
+
+- Pour initialiser git :
+ $ git config --global user.name "John Doe"
+ $ git config --global user.email johndoe@example.com
+
+- Download visual studio code
+
+Initialiser le fichier php.ini :
+  Decommenter openssl
+              fileinfo
+              mysqli
+              pdo_mysql
+              curl
+
+- creer un projet Laravel
+  composer create-project laravel/laravel wrk1
+
+- Creer une DATABASE avec phpMyAdmin => Name database -> wrk1
+
+- Faire une liaison entre le projet laravel wrk1 et la DATABASE wrk1
+  php artisan migrate
+
+- installer laravel ui :
+  > composer require laravel/ui
+
+- php artisan ui bootstrap --auth
+
+- installer nodejs (nodejs.org)
+
+- php artisan route:list
+
+- Pour lancer mysql :
+  mysql -u root -p
+
+- Pour lancer phpMyAdmin
+   1- Se placer dans le repertoire phpMyAdmin en utilsant cmd .
+   2- Avec cmd -> la commande : php -S localhost:9000
+   4  Aller dans le navigateur url > http://www.localhost:9000 
+   5 > Username : root
+     > Password : root
+
+- Pour installer debugbar à partir de git :
+  composer require barryvdh/laravel-debugbar
+  voir la site:
+  https://github.com/barryvdh/laravel-debugbar
+
+
+
+
+
+
